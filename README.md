@@ -36,4 +36,4 @@ START:
 php artisan serve
 
 go to:
-http://localhost:8000/products
+http://localhost:8000/login

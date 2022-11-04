@@ -16,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('orders/orderDetails/{id}', 'OrderController@show');
-Route::resource('orders', 'OrderController');
-Route::resource('products', 'ProductController');
-Route::post('/getNumbers', 'OrderController@getMinimum');
+Route::get('login','CustomAuthController@login')->middleware('alreadyLoggedIn');
+Route::get('orders/orderDetails/{id}', 'OrderController@show')->middleware('isLoggedIn');
+Route::resource('orders', 'OrderController')->middleware('isLoggedIn');
+Route::resource('products', 'ProductController')->middleware('isLoggedIn');
+Route::post('/getNumbers', 'OrderController@getMinimum')->middleware('isLoggedIn');
+Route::post('login-user', 'CustomAuthController@loginUser');
+Route::get('logout', 'CustomAuthController@logout');

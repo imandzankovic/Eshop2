@@ -15,9 +15,8 @@ class CreateUserModelsTable extends Migration
     {
         Schema::create('user_models', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->float('phone');
             $table->string('email')->unique();
+            $table->string('password');
             $table->timestamps();
         });
     }

@@ -16,6 +16,7 @@
   <h1 >Flex ORDER</h1>
   <div class="float-right mr-5">
     <a href="" class='btn btn-primary' data-toggle="modal" data-target="#myModal">Add New Order</a>
+    <a href="logout" class='btn btn-primary'>LogOut</a>
   </div>
 </div>
   

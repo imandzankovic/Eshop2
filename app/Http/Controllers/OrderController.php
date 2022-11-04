@@ -106,14 +106,14 @@ class OrderController extends Controller
         return redirect('orders');
     }
 
-    public static function getMinimum(Request $request){
-        $my_array= $request->input;
-        $n = count($my_array);
-        $min_val = $my_array[0];
-        for ($i = 1; $i < $n; $i++)
-           if ($min_val > $my_array[$i] && $my_array[$i]>0)
-              $min_val = $my_array[$i];
-              return $min_val;
+    public function getMinimum(Request $request){
+     
+        $array= $request->input;
+        $n = count($array);
+        $min = $array[0];
+        for ($i = 1;$i < $n;$i++) if ($min > $array[$i]) $min = $array[$i];
+        return $min;
+       
      }
     
 }

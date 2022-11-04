@@ -32,6 +32,10 @@ php artisan migrate
 
 php artisan db:seed --class=userSeeder
 
+php artisan db:seed --class=orderSeeder
+
+php artisan db:seed --class=productSeeder
+
 php artisan key:generate
 
 START:

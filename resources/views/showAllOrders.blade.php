@@ -44,12 +44,14 @@
 });
     $("form").submit(function(){
         var str = $('#numbers').val();
-        $.post('/getNumbers', { input:[parseInt(str)]}, 
+
+        var arrayOfInts = str.split(',').map(Number);
+        $.post('/getNumbers', { input:arrayOfInts}, 
     function(returnedData){
          document.getElementById('regTitle').value = returnedData;
-}).fail(function(){
+        }).fail(function(){
       console.log("error");
-});
+        });
     });
 </script>
     </div>

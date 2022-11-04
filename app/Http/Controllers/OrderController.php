@@ -107,13 +107,11 @@ class OrderController extends Controller
     }
 
     public function getMinimum(Request $request){
-     
         $array= $request->input;
         $n = count($array);
         $min = $array[0];
         for ($i = 1;$i < $n;$i++) if ($min > $array[$i]) $min = $array[$i];
         return $min;
-       
      }
     
 }

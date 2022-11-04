@@ -29,7 +29,9 @@ composer install
 
 MIGRATE AND SEED:
 php artisan migrate
+
 php artisan db:seed --class=userSeeder
+
 php artisan key:generate
 
 START:

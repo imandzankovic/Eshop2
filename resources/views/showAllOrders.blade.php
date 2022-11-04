@@ -28,13 +28,15 @@
   <a href="/products" class="list-group-item list-group-item-action">Products</a>
  </div>
  <div class="col-5">
- <p>Input your array here:</p>
+ <!-- <p>Input your array here:</p> -->
  
     <form action="javascript:void(0);" method="post">
-    <input type="text" id="numbers" placeholder="Enter numbers" />
-    <input type="submit" value="submit" class='btn btn-primary'/>
+    <p style="width: 166px;color: #0066FF;margin-top: 34px;">Input your array here:</p>
+    <input style="width:190px;" class="form-control" id="numbers" type="text" name="numbers" placeholder="Enter numbers…">
+    <input style="width:190px;margin-top: 23px;" class="form-control" id="regTitle" type="text" name="regTitle" placeholder="Readonly input here…" readonly>
+    <input type="submit" value="submit" class='btn btn-primary' style="margin-left: 35px;margin-top: 11px;margin-bottom: 11px;"/>
+   
 
-    <input id="regTitle" type="text" name="regTitle" placeholder="result is" disabled />
 </form>
 
 <script type="text/javascript">
